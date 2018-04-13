@@ -22,7 +22,7 @@ h1 {
   text-shadow: -2px 2px 0 #D2D2D2;
   margin-top: 36px;
   font-weight: 300;
-  line-height: 1em;
+  line-height: 1.2em;
 }
 
 iframe {
@@ -83,6 +83,8 @@ textarea {
 
 .subtitle {
   margin-bottom: 96px;
+  line-height: 1.4em;
+  font-size: 1.8em;
 }
 
 .section {
