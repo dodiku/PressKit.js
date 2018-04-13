@@ -8,7 +8,6 @@ body {
   font-family: Futura, "Trebuchet MS", Arial, sans-serif;
   font-weight: 300;
   padding: 2em;
-  max-width: 480px;
   line-height: 20px;
 }
 
@@ -18,7 +17,7 @@ h2 {
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 4em;
   text-transform: uppercase;
   text-shadow: -2px 2px 0 #D2D2D2;
   margin-top: 36px;
@@ -30,25 +29,67 @@ iframe {
   margin-top: 6px;
 }
 
+button {
+  font-size: 0.7em;
+  background-image: linear-gradient(-179deg, #80C3F3 0%, #5EA3E8 9%, #4A90E2 100%);
+  border: 1px solid #3984DC;
+  border-radius: 2px;
+  color: white;
+  width: 140px;
+  height: 28px;
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+img {
+  object-fit: cover;
+  margin-top: 6px;
+}
+
+textarea {
+  resize: none;
+  overflow:hidden;
+  display: block;
+  width: 95%;
+  height: auto;
+  background: rgba(255,255,255,0.50);
+  border: 1px solid #EFEFEF;
+  padding: 12px;
+  padding-bottom: 0px;
+  margin-top: 6px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 0.8em;
+  color: #666;
+  line-height: 20px;
+}
+
+.conteiner {
+  margin: auto;
+  max-width: 480px;
+}
+
+.buttons {
+  text-align: right;
+}
+
+.button_icon {
+  font-size: 1.6em;
+}
+
+.section_title {
+  margin-bottom: 12px;
+}
+
+
 .subtitle {
-  /* margin-bottom: 96px; */
+  margin-bottom: 96px;
 }
 
 .section {
   margin-top: 48px;
 }
 
-.text_box {
-  background: rgba(255,255,255,0.50);
-  border: 1px solid #EFEFEF;
-  padding: 12px;
-  margin-top: 6px;
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 0.8em;
-  color: #666;
-}
 
-
-.video {
+.video, .gif, .photo {
   margin-bottom: 36px;
 }

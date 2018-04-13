@@ -1,57 +1,122 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Soundscape :: About</title>
+    <title>PRESS KIT</title>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width"/>
     <link rel="stylesheet" href="presskit_styles.css"/>
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
-    <h2>PRESS KIT</h2>
-
-    <h1>Project Name</h1>
-    <div class="subtitle">asdf asdf asdf asdf</div>
 
     <div class="conteiner">
 
+      <h2>PRESS KIT</h2>
+
+      <h1>Project Name</h1>
+      <div class="subtitle">asdf asdf asdf asdf</div>
+
       <div class="section" id="link">
         <div class="section_title">🖥 Link to [project_name]</div>
-        <div class="text_box">http://www.domain.com</div>
+        <div class="buttons">
+            <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY TO CLIPBOARD</button>
+        </div>
+        <textarea readonly class="text_box">http://www.domain.com</textarea>
       </div>
 
       <div class="section" id="creators">
         <div class="section_title">👩‍💻 Creators</div>
-        <div class="text_box">
-          <div class="name">Name: John Doe</div>
-          <div class="portfolio">Portfolio: www.portfolio.com</div>
-          <div class="email">Email: email@domain.com</div>
-          <div class="twitter">Twitter: www.twitter.com/johndoe</div>
+        <div class="buttons">
+            <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY TO CLIPBOARD</button>
         </div>
+        <textarea readonly class="text_box">
+Name: John Doe
+Portfolio: www.portfolio.com
+Email: email@domain.com
+Twitter: www.twitter.com/johndoe</textarea>
       </div>
 
       <div class="section" id="about">
         <div class="section_title">🛋 About [project_name]</div>
-        <div class="text_box">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        <div class="buttons">
+            <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY TO CLIPBOARD</button>
         </div>
+        <textarea readonly class="text_box">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
       </div>
 
       <div class="section" id="videos">
         <div class="section_title">📹 Videos</div>
-        <div class="video">
-          <div class="text_box">https://vimeo.com/219242516</div>
-          <iframe src="https://player.vimeo.com/video/264101415" frameBorder="0" width=480 height=270> </iframe>
+
+        <div class="video" id="video01">
+          <div class="buttons">
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://vimeo.com/219242516</textarea>
+          <iframe src="https://player.vimeo.com/video/264101415" frameBorder="0" width=100% height=270> </iframe>
         </div>
 
-        <div class="video">
-          <div class="text_box">https://www.youtube.com/watch?v=GjYENsrLLf4</div>
-          <iframe src="https://www.youtube.com/embed/GjYENsrLLf4" frameBorder="0" width=480 height=270> </iframe>
+        <div class="video" id="video02">
+          <div class="buttons">
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://www.youtube.com/watch?v=GjYENsrLLf4</textarea>
+          <iframe src="https://www.youtube.com/embed/GjYENsrLLf4" frameBorder="0" width=100% height=270> </iframe>
         </div>
       </div>
 
+      <div class="section" id="gifs">
+        <div class="section_title">👾 GIFs</div>
+
+        <div class="gif" id="gif01">
+          <div class="buttons">
+            <a href="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://media.giphy.com/media/3o6ZsX2OZJ8G3Tec6Y/giphy.gif</textarea>
+          <img src="https://media.giphy.com/media/3o6ZsX2OZJ8G3Tec6Y/giphy.gif" width=100%>
+        </div>
+
+        <div class="gif" id="gif02">
+          <div class="buttons">
+              <a href="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://media.giphy.com/media/IwTWTsUzmIicM/giphy.gif</textarea>
+          <img src="https://media.giphy.com/media/IwTWTsUzmIicM/giphy.gif" width=100%>
+        </div>
+      </div>
+
+      <div class="section" id="photos">
+        <div class="section_title">📷 Photos</div>
+
+        <div class="photo" id="photo01">
+          <div class="buttons">
+            <a href="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://unsplash.com/photos/CrnPTz6f-tE/</textarea>
+          <img src="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" width=100%>
+        </div>
+
+        <div class="photo" id="photo02">
+          <div class="buttons">
+              <a href="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
+              <button type="button" name="button" id="text_box"><span class="button_icon" onclick="copyToClipboard()">⎘</span> COPY LINK</button>
+          </div>
+          <textarea readonly class="text_box">https://unsplash.com/photos/k3heD_KwH0A/</textarea>
+          <img src="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" width=100%>
+        </div>
+      </div>
+
+
+      <br>
+      <div class="bye">~ ❤️~</div>
+
     </div>
 
-    <br>
-    <div class="bye">~ ❤️~</div>
+    <script type="text/javascript" src="presskit.js"></script>
+  </body>
+</html>
