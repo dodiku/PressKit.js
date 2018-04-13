@@ -4,12 +4,12 @@ If you want to put your project out there and to expose it to more people like y
 
 This is where ``PressKit.js`` comes handy 🙌! Collect all your media and textual information, and create a nice project press kit page to make it easier for the popular media to cover your work in a more appealing way!
 
-![PressKit.js](design/demo_gif.gif)
+
 
 ### How to use
 It's extremely simple:
-1. Edit ``press.html`` using your favorite text editor.
-2. Find the ``projectDetails`` object (see example below), replace the placeholders with text about your project and with URLs to media files.
+1. In ``press.html``, find the ``projectDetails`` object (see example below). using your favorite text editor.
+2. Replace the placeholders with text about your project and with URLs to media files.
 3. Add a link to ``press.html`` on your project home page.
 
 ```javascript
