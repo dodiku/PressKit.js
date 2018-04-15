@@ -1,10 +1,16 @@
+[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
 # PressKit.js
+
 ``PressKit.js`` generates a fancy press kit for your project!
 If you want to put your project out there and to expose it to more people like yourself, creating good documentation -- photos, gifs, videos -- is the best way to communicate your ideas.
 
 This is where ``PressKit.js`` comes handy 🙌! Collect all your media and textual information, and create a nice project press kit page to make it easier for the popular media to cover your work in a more appealing way!
 
 ![PressKit.js](design/demo_gif.gif)
+
+### Example Page
+See example page on -
+>  [dodiku.github.io/presskit.js/](dodiku.github.io/presskit.js/)
 
 ### How to use
 It's extremely simple:

@@ -44,6 +44,23 @@ function getClipboardButton(){
 
 }
 
+function getLinkButton(){
+
+  // copy to clipboard button
+  var buttonClipboard = document.createElement('button');
+  buttonClipboard.name='copyToClipboard';
+  buttonClipboard.id = 'text_box';
+  buttonClipboard.onclick = 'copyToClipboard()';
+  var copyIcon = document.createElement('span');
+  copyIcon.classList.add('button_icon');
+  copyIcon.innerHTML = '⎘';
+  buttonClipboard.appendChild(copyIcon);
+  buttonClipboard.appendChild(document.createTextNode(" COPY LINK"));
+
+  return buttonClipboard;
+
+}
+
 
 function appendContent(){
 
@@ -51,7 +68,7 @@ function appendContent(){
   document.addEventListener('DOMContentLoaded', function(){
 
     // checking if projectDetails exists
-    if (typeof projectDetails !== undefined) {
+    if (typeof projectDetails !== 'undefined') {
 
       // creating a conteiner for the whole shabang
       var conteiner = document.createElement('div');
@@ -63,10 +80,8 @@ function appendContent(){
       pressKit.innerHTML = 'PRESS KIT';
       conteiner.append(pressKit);
 
-      // project title section
-
-      // project title section
-      if (typeof projectDetails.title !== undefined) {
+      // title section
+      if (typeof projectDetails.title !== 'undefined') {
         var title = document.createElement('h1');
         title.innerHTML = projectDetails.title;
         conteiner.append(title);
@@ -74,8 +89,8 @@ function appendContent(){
         document.title = projectDetails.title + ' :: PRESS KIT';
       }
 
-      // project subtitle section
-      if (typeof projectDetails.subTitle !== undefined) {
+      // subtitle section
+      if (typeof projectDetails.subTitle !== 'undefined') {
         var subTitle = document.createElement('div');
         subTitle.innerHTML = projectDetails.subTitle;
         subTitle.classList.add('subtitle');
@@ -83,8 +98,8 @@ function appendContent(){
       }
 
 
-      // project link section
-      if (typeof projectDetails.link !== undefined) {
+      // link section
+      if (typeof projectDetails.link !== 'undefined') {
           var link = document.createElement('div');
           link.classList.add('section');
           link.id = 'link';
@@ -108,8 +123,8 @@ function appendContent(){
           link.append(linkTextArea);
       }
 
-      // project creators section
-      if (typeof projectDetails.creators !== undefined) {
+      // creators section
+      if (typeof projectDetails.creators !== 'undefined') {
 
         var creators = document.createElement('div');
         creators.classList.add('section');
@@ -136,31 +151,114 @@ function appendContent(){
         for (var i = 0; i < creatorsArray.length; i++) {
 
           if (i > 0) {
-            console.log(i);
             creatorsTextArea.append('\n');
             creatorsTextArea.append('\n');
           }
 
-          if (typeof creatorsArray[i].name !== undefined) {
+          if (typeof creatorsArray[i].name !== 'undefined') {
             creatorsTextArea.append('Name: ' + creatorsArray[i].name);
           }
 
-          if (typeof creatorsArray[i].portfolio !== undefined) {
+          if (typeof creatorsArray[i].portfolio !== 'undefined') {
             creatorsTextArea.append('\n');
             creatorsTextArea.append('Portfolio: ' + creatorsArray[i].portfolio);
           }
 
-          if (typeof creatorsArray[i].email !== undefined) {
+          if (typeof creatorsArray[i].email !== 'undefined') {
             creatorsTextArea.append('\n');
             creatorsTextArea.append('Email: ' + creatorsArray[i].email);
           }
 
-          if (typeof creatorsArray[i].twitter !== undefined) {
+          if (typeof creatorsArray[i].twitter !== 'undefined') {
             creatorsTextArea.append('\n');
             creatorsTextArea.append('Twitter: ' + creatorsArray[i].twitter);
           }
 
         }
+
+      }
+
+      // about section
+      if (typeof projectDetails.about !== 'undefined') {
+        var about = document.createElement('div');
+        about.classList.add('section');
+        about.id = 'about';
+        conteiner.append(about);
+
+        var aboutTitle = document.createElement('div');
+        aboutTitle.classList.add('section_title');
+        var aboutTitleText;
+        if (typeof projectDetails.title !== 'undefined'){
+          aboutTitleText = '🛋 About ' + projectDetails.title;
+        } else {
+          aboutTitleText = '🛋 About';
+        }
+        aboutTitle.innerHTML = aboutTitleText;
+        about.append(aboutTitle);
+
+        var aboutButtons = document.createElement('div');
+        aboutButtons.classList.add('buttons');
+        about.append(aboutButtons);
+
+        aboutButtons.append(getClipboardButton());
+
+        var aboutTextArea = document.createElement('textarea');
+        aboutTextArea.readOnly = true;
+        aboutTextArea.classList.add('text_box');
+        for (var a = 0; a < projectDetails.about.length; a++) {
+          if (a > 0) {
+            aboutTextArea.append('\n');
+            aboutTextArea.append('\n');
+          }
+          aboutTextArea.append(projectDetails.about[a]);
+        }
+        about.append(aboutTextArea);
+      }
+
+      // videos section
+      if (typeof projectDetails.videos !== 'undefined') {
+        var videos = document.createElement('div');
+        videos.classList.add('section');
+        videos.id = 'videos';
+        conteiner.append(videos);
+
+        var videosTitle = document.createElement('div');
+        videosTitle.classList.add('section_title');
+        videosTitle.innerHTML = '📹 Videos';
+        videos.append(videosTitle);
+
+        for (var v = 0; v < projectDetails.videos.length; v++) {
+          var video = document.createElement('div');
+          video.classList.add('video');
+          video.id = 'video' + v;
+          videos.append(video);
+
+          if (typeof projectDetails.videos[v].videoPage !== 'undefined') {
+            var buttons = document.createElement('div');
+            buttons.classList.add('buttons');
+            video.append(buttons);
+
+            buttons.append(getLinkButton());
+
+            var textArea = document.createElement('textarea');
+            textArea.readOnly = true;
+            textArea.classList.add('text_box');
+            textArea.append(projectDetails.videos[v].videoPage);
+            video.append(textArea);
+          }
+
+          if (typeof projectDetails.videos[v].embedUrl !== 'undefined') {
+            var videoFrame = document.createElement('iframe');
+            videoFrame.src = projectDetails.videos[v].embedUrl;
+            videoFrame.frameBorder="0";
+            videoFrame.width='100%';
+            videoFrame.height='270';
+            video.append(videoFrame);
+          }
+
+
+        }
+
 
       }
 
