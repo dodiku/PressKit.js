@@ -10,7 +10,7 @@ This is where ``PressKit.js`` comes handy 🙌! Collect all your media and textu
 
 ### Example Page
 See example page on -
->  [dodiku.github.io/presskit.js/](dodiku.github.io/presskit.js/)
+>  [dodiku.github.io/presskit.js/](https://dodiku.github.io/PressKit.js/)
 
 ### How to use
 It's extremely simple:
