@@ -298,7 +298,7 @@ function appendContent(){
         gifsTitle.innerHTML = '👾 GIFs';
         gifs.append(gifsTitle);
 
-        for (var g = 0; g < projectDetails.videos.length; g++) {
+        for (var g = 0; g < projectDetails.gifs.length; g++) {
           var gif = document.createElement('div');
           gif.classList.add('gif');
           gif.id = 'gif' + g;
