@@ -13,7 +13,9 @@ function copyToClipboard() {
 function setButtonEvents() {
   var buttons = document.getElementsByTagName('button');
   for (var i = 0; i < buttons.length; i++) {
-    buttons[i].addEventListener('click', copyToClipboard);
+    if (buttons[i].name != 'download'){
+      buttons[i].addEventListener('click', copyToClipboard);
+    }
   }
 }
 
@@ -46,19 +48,41 @@ function getClipboardButton(){
 
 function getLinkButton(){
 
-  // copy to clipboard button
-  var buttonClipboard = document.createElement('button');
-  buttonClipboard.name='copyToClipboard';
-  buttonClipboard.id = 'text_box';
-  buttonClipboard.onclick = 'copyToClipboard()';
+  // copy link button
+  var buttonLink = document.createElement('button');
+  buttonLink.name='copyLink';
+  buttonLink.id = 'text_box';
+  buttonLink.onclick = 'copyToClipboard()';
   var copyIcon = document.createElement('span');
   copyIcon.classList.add('button_icon');
   copyIcon.innerHTML = '⎘';
-  buttonClipboard.appendChild(copyIcon);
-  buttonClipboard.appendChild(document.createTextNode(" COPY LINK"));
+  buttonLink.appendChild(copyIcon);
+  buttonLink.appendChild(document.createTextNode(" COPY LINK"));
 
-  return buttonClipboard;
+  return buttonLink;
 
+}
+
+function getDownloadButton(url){
+
+  // download button
+  var link = document.createElement('a');
+  link.href = url;
+  link.download = true;
+
+
+  var buttonDownload = document.createElement('button');
+  buttonDownload.name='download';
+  buttonDownload.id = 'text_box';
+  var downloadIcon = document.createElement('span');
+  downloadIcon.classList.add('button_icon');
+  downloadIcon.innerHTML = '⬇';
+  buttonDownload.appendChild(downloadIcon);
+  buttonDownload.appendChild(document.createTextNode(" DOWNLOAD"));
+
+  link.appendChild(buttonDownload);
+
+  return link;
 }
 
 
@@ -259,6 +283,90 @@ function appendContent(){
 
         }
 
+
+      }
+
+      // gifs section
+      if (typeof projectDetails.gifs !== 'undefined') {
+        var gifs = document.createElement('div');
+        gifs.classList.add('section');
+        gifs.id = 'videos';
+        conteiner.append(gifs);
+
+        var gifsTitle = document.createElement('div');
+        gifsTitle.classList.add('section_title');
+        gifsTitle.innerHTML = '👾 GIFs';
+        gifs.append(gifsTitle);
+
+        for (var g = 0; g < projectDetails.videos.length; g++) {
+          var gif = document.createElement('div');
+          gif.classList.add('gif');
+          gif.id = 'gif' + g;
+          gifs.append(gif);
+
+          if (typeof projectDetails.gifs[g].gifUrl !== 'undefined') {
+            var btns = document.createElement('div');
+            btns.classList.add('buttons');
+            gif.append(btns);
+
+            btns.append(getDownloadButton(projectDetails.gifs[g].gifUrl));
+            btns.append(getLinkButton());
+
+            var gifTextArea = document.createElement('textarea');
+            gifTextArea.readOnly = true;
+            gifTextArea.classList.add('text_box');
+            gifTextArea.append(projectDetails.gifs[g].gifUrl);
+            gif.append(gifTextArea);
+
+            var img = document.createElement('img');
+            img.src = projectDetails.gifs[g].gifUrl;
+            img.style.width = '100%';
+            gif.append(img);
+
+          }
+        }
+
+      }
+
+      // photos section
+      if (typeof projectDetails.photos !== 'undefined') {
+        var photos = document.createElement('div');
+        photos.classList.add('section');
+        photos.id = 'videos';
+        conteiner.append(photos);
+
+        var photosTitle = document.createElement('div');
+        photosTitle.classList.add('section_title');
+        photosTitle.innerHTML = '📷 Photos';
+        photos.append(photosTitle);
+
+        for (var p = 0; p < projectDetails.photos.length; p++) {
+          var photo = document.createElement('div');
+          photo.classList.add('photo');
+          photo.id = 'photo' + p;
+          photos.append(photo);
+
+          if (typeof projectDetails.photos[p].photoUrl !== 'undefined') {
+            var photoBtns = document.createElement('div');
+            photoBtns.classList.add('buttons');
+            photo.append(photoBtns);
+
+            photoBtns.append(getDownloadButton(projectDetails.photos[p].photoUrl));
+            photoBtns.append(getLinkButton());
+
+            var photoTextArea = document.createElement('textarea');
+            photoTextArea.readOnly = true;
+            photoTextArea.classList.add('text_box');
+            photoTextArea.append(projectDetails.photos[p].photoUrl);
+            photo.append(photoTextArea);
+
+            var photoImg = document.createElement('img');
+            photoImg.src = projectDetails.photos[p].photoUrl;
+            photoImg.style.width = '100%';
+            photo.append(photoImg);
+
+          }
+        }
 
       }
 
