@@ -1,8 +1,13 @@
 # PressKit.js
 
 [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
+- [About](#about)
+- [Example](#example)
+- [Usage](#usage)
 
+### About
 ``PressKit.js`` generates a fancy press kit for your project!
 If you want to put your project out there and to expose it to more people like yourself, creating good documentation -- photos, gifs, videos -- is the best way to communicate your ideas.
 
@@ -10,11 +15,11 @@ This is where ``PressKit.js`` comes handy 🙌! Collect all your media and textu
 
 ![PressKit.js](gifs/demo_gif.gif)
 
-### Example Page
+### Example
 See example page on -
 >  [https://dodiku.github.io/PressKit.js/](https://dodiku.github.io/PressKit.js/)
 
-### How to use
+### Usage
 It's extremely simple:
 1. In ``press.html``, find the ``projectDetails`` object (see example below). using your favorite text editor.
 2. Replace the placeholders with text about your project and with URLs to media files.
@@ -93,3 +98,4 @@ var projectDetails = {
 
 }
 ```
+
