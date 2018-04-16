@@ -9,114 +9,87 @@
   </head>
   <body>
 
-    <div class="conteiner">
+    <script type="text/javascript">
 
-      <h2>PRESS KIT</h2>
+      var projectDetails = {
 
-      <h1>My awesome project</h1>
-      <div class="subtitle">A project that changes the world in a very weird way</div>
+        'title': 'My awesome project', // the title of the project
 
-      <div class="section" id="link">
-        <div class="section_title">🖥 Link to [project_name]</div>
-        <div class="buttons">
-            <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY TO CLIPBOARD</button>
-        </div>
-        <textarea readonly class="text_box">http://www.domain.com</textarea>
-      </div>
+        'subTitle': 'A project that changes the world in a very weird way', // the subtitle of the project
 
-      <div class="section" id="creators">
-        <div class="section_title">👩‍💻 Creators</div>
-        <div class="buttons">
-            <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY TO CLIPBOARD</button>
-        </div>
-        <textarea readonly class="text_box">
-Name: John Doe
-Portfolio: www.portfolio.com
-Email: email@domain.com
-Twitter: www.twitter.com/johndoe</textarea>
-      </div>
+        'link': 'http://www.url-to-project.com', // link to the project landig page
 
-      <div class="section" id="about">
-        <div class="section_title">🛋 About [project_name]</div>
-        <div class="buttons">
-            <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY TO CLIPBOARD</button>
-        </div>
-        <textarea readonly class="text_box">
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        'creators': [ // supports multiple creators. just add more objects to the array
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
-      </div>
+          {
+            'name': 'name',
+            'portfolio': 'http://www.url.com',
+            'email': 'a@b.com',
+            'twitter': 'http://www.twitter.com/name'
+          },
 
-      <div class="section" id="videos">
-        <div class="section_title">📹 Videos</div>
+          {
+            'name': 'name',
+            'portfolio': 'http://www.url.com',
+            'email': 'a@b.com',
+            'twitter': 'http://www.twitter.com/name'
+          },
 
-        <div class="video" id="video01">
-          <div class="buttons">
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://vimeo.com/219242516</textarea>
-          <iframe src="https://player.vimeo.com/video/264101415" frameBorder="0" width=100% height=270> </iframe>
-        </div>
+        ],
 
-        <div class="video" id="video02">
-          <div class="buttons">
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://www.youtube.com/watch?v=GjYENsrLLf4</textarea>
-          <iframe src="https://www.youtube.com/embed/GjYENsrLLf4" frameBorder="0" width=100% height=270> </iframe>
-        </div>
-      </div>
+        'about': [
 
-      <div class="section" id="gifs">
-        <div class="section_title">👾 GIFs</div>
+          '“Nobody tells this to people who are beginners, I wish someone told me. All of us who do creative work, we get into it because we have good taste. But there is this gap. For the first couple years you make stuff, it’s just not that good. It’s trying to be good, it has potential, but it’s not. But your taste, the thing that got you into the game, is still killer. And your taste is why your work disappoints you. A lot of people never get past this phase, they quit. Most people I know who do interesting, creative work went through years of this. We know our work doesn’t have this special thing that we want it to have. We all go through this. And if you are just starting out or you are still in this phase, you gotta know its normal and the most important thing you can do is do a lot of work.',
 
-        <div class="gif" id="gif01">
-          <div class="buttons">
-            <a href="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://media.giphy.com/media/3o6ZsX2OZJ8G3Tec6Y/giphy.gif</textarea>
-          <img src="https://media.giphy.com/media/3o6ZsX2OZJ8G3Tec6Y/giphy.gif" width=100%>
-        </div>
+          'Put yourself on a deadline so that every week you will finish one story. It is only by going through a volume of work that you will close that gap, and your work will be as good as your ambitions. And I took longer to figure out how to do this than anyone I’ve ever met. It’s gonna take awhile. It’s normal to take awhile. You’ve just gotta fight your way through.”',
 
-        <div class="gif" id="gif02">
-          <div class="buttons">
-              <a href="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://media.giphy.com/media/IwTWTsUzmIicM/giphy.gif</textarea>
-          <img src="https://media.giphy.com/media/IwTWTsUzmIicM/giphy.gif" width=100%>
-        </div>
-      </div>
+          ' -- Ira Glass'
+        ],
 
-      <div class="section" id="photos">
-        <div class="section_title">📷 Photos</div>
+        'videos': [ // supports multiple videos. just add more objects to the array
 
-        <div class="photo" id="photo01">
-          <div class="buttons">
-            <a href="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://unsplash.com/photos/CrnPTz6f-tE/</textarea>
-          <img src="https://unsplash.com/photos/CrnPTz6f-tE/download?force=true" width=100%>
-        </div>
+          {
+            'embedUrl': 'https://player.vimeo.com/video/213431093', // e.g. https://www.youtube.com/embed/GjYENsrLLf4
+            'videoPage': 'https://vimeo.com/213431093' // e.g. https://www.youtube.com/watch?v=GjYENsrLLf4
+          },
 
-        <div class="photo" id="photo02">
-          <div class="buttons">
-              <a href="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" download><button type="button" name="button" id="text_box"><span class="button_icon">⬇</span> DOWNLOAD</button></a>
-              <button type="button" name="button" id="text_box" onclick="copyToClipboard()"><span class="button_icon">⎘</span> COPY LINK</button>
-          </div>
-          <textarea readonly class="text_box">https://unsplash.com/photos/k3heD_KwH0A/</textarea>
-          <img src="https://unsplash.com/photos/k3heD_KwH0A/download?force=true" width=100%>
-        </div>
-      </div>
+          {
+            'embedUrl': 'https://www.youtube.com/embed/b4V7ttON8cs', // e.g. https://www.youtube.com/embed/GjYENsrLLf4
+            'videoPage': 'https://www.youtube.com/watch?v=Cihr9OWsEuk' // e.g. https://www.youtube.com/watch?v=GjYENsrLLf4
+          },
 
+        ],
 
-      <br>
-      <div class="bye">~ ❤️~</div>
+        'gifs': [ // supports multiple gifs. just add more objects to the array
 
-    </div>
+          {
+            'gifUrl': 'https://media.giphy.com/media/UVd8lRlYFIKwo/giphy.gif'
+          },
+
+          {
+            'gifUrl': 'https://media.giphy.com/media/3oKGz8Mr8stJzA0JDW/giphy.gif'
+          },
+
+        ],
+
+        'photos': [ // supports multiple photos. just add more objects to the array
+
+          {
+            'photoUrl': 'https://unsplash.com/photos/hYAmjIvLALE/download?force=true'
+          },
+
+          {
+            'photoUrl': 'https://unsplash.com/photos/tIHb8sIvWPk/download?force=true'
+          },
+
+        ],
+
+      }
+
+    </script>
+
 
     <script type="text/javascript" src="presskit.js"></script>
+
   </body>
 </html>
