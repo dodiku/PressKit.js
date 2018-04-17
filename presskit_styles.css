@@ -95,3 +95,7 @@ textarea {
 .video, .gif, .photo {
   margin-bottom: 36px;
 }
+
+footer {
+  text-align: center;
+}

@@ -369,6 +369,12 @@ function appendContent(){
         }
 
       }
+      // footer
+      if (typeof projectDetails.footer !== "undefined") {
+        let footer = document.createElement("footer");
+        footer.innerHTML = projectDetails.footer;
+        conteiner.append(footer);
+      }
 
     }
 
