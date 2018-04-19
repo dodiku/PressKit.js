@@ -98,6 +98,12 @@ var projectDetails = {
     },
 
   ],
+  
+  'footer': [{
+       'footerText': "PressKit.js",
+       'footerLink': "https://github.com/dodiku/PressKit.js"
+     }, 
+   ],
 
 }
 ```
