@@ -65,7 +65,10 @@ var projectDetails = {
       'embedUrl': 'http://www.url.com', // e.g. https://www.youtube.com/embed/GjYENsrLLf4
       'videoPage': 'http://www.url.com', // e.g. https://www.youtube.com/watch?v=GjYENsrLLf4
     },
-
+    {
+      'embedUrl': 'http://www.url.com', // e.g. https://player.vimeo.com/video/250989990
+		' videoPage': 'http://www.url.com', // e.g. https://vimeo.com/250989990
+    },
   ],
 
   'gifs': [ // supports multiple gifs. just add more objects to the array
@@ -95,6 +98,12 @@ var projectDetails = {
     },
 
   ],
+  
+  'footer': [{
+       'footerText': "PressKit.js",
+       'footerLink': "https://github.com/dodiku/PressKit.js"
+     }, 
+   ],
 
 }
 ```
