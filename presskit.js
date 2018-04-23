@@ -68,7 +68,7 @@ function getDownloadButton(url){
   // download button
   var link = document.createElement('a');
   link.href = url;
-  link.download = true;
+  link.download = url;
 
 
   var buttonDownload = document.createElement('button');
